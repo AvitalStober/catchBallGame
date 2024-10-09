@@ -178,28 +178,27 @@ document.addEventListener('keydown', (event) => {
 
 // Adding a ball to the board
 const addBall = () => {
-
-    ballsCounter++;
-
+    
     const ballImg = document.getElementById("ball");
     const row = getRandomNumber(1, ROW - 1);
     const column = getRandomNumber(ROW + 2, COLUMN - 1);
-
+    
     const mySquer = document.getElementsByClassName(`class${row} class${column} square`);
     const myClasses = mySquer[0].className.split(' ');
-
+    
     // Ball copy
     const newBall = ballImg.cloneNode(true);
-
+    
     newBall.classList.add(myClasses[0]);
     newBall.classList.add(myClasses[1]);
     newBall.classList.add("newBall");
-
+    
     newBall.style.visibility = "visible";
-
+    
     // Add to the board
     mySquer[0].appendChild(newBall);
-
+    
+    ballsCounter++;
 }
 
 const win = () => {
