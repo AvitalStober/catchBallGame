@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ballGame.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- start button and the player scores -->
+    <div class="actions">
+        <button onclick="startGame()" id="startButton">START</button>
+        <h1 id="score">your score is: <h1 id="inner"></h1></h1>
+    </div>
+
+    <!-- play board -->
+    <div id="board">
+        <img class="players" id="ball" src="../img/basketball.png" alt="ball" />
+        <img class="players" id="kids" src="../img/chase.png" alt="kids" />
+    </div>
+
+    <script src="../js/ballGame.js"></script>
+</body>
+
+</html>
